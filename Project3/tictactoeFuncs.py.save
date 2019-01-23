@@ -1,0 +1,69 @@
+# Project 3 - Tic-Tac-Toe Simulator
+# 
+# Name: Ajay Patel
+# Instructor: S. Einakian 
+# Section: 1
+# Functions definitions comes here
+
+  
+def Welcome():
+   print("Welcome to this Tic-Tac-Toe Simulator.")
+   print("Your goal is to line up 3 of your tics in either a line or a diagonol.")
+   print("You will pick either X or O. X will go first")
+   num = int(input("Do you wish to play against a (1) computer, or with (2)Players? "))     
+   while num < 1 or num > 2:
+      print("ERROR: You must either play against (1) computer, or with (2)Players")
+      num = int(input("Do you wish to play against (1) computer, or with (2)Players? "))
+      if num == 1:
+         return 1
+      elif num == 2:
+         return 2
+ 
+def createBoard():
+   board = ['','','','','','','','','']
+    
+   print("The board postions are as follows:")
+
+   return board
+
+def printBoard(board):
+   createBoard
+   print("  " + board[0] + " | " + board[1] + "  | " + board[2])   
+   print("------------")
+   print("  " + board[3] + " | " + board[4] + "  | " + board[5])
+   print("------------")
+   print("  " + board[6] + " | " + board[7] + "  | " + board[8])
+   
+def pickLetter():
+   letter = str(input("Choose X or O: "))
+   while not(letter == "X" or letter == "O"):
+     print("ERROR: Invalid letter please use X or O")
+     letter = str(input("Choose X or O: "))
+   if letter == "X":
+     return letter
+   elif letter == "O":
+     return letter   
+
+def getInput(letter, board):
+   spot = int(input("Where do you like to place your letter (pick in range of 1-9): "))
+   while spot < 1 or spot > 9:
+      print("Invalid move! Location is already taken. Please try again.")
+      spot = int(input("Where do you like to place your letter (pick in range of 1-9): "))   
+   if spot >= 1 and spot <= 9:
+      return board
+
+#def checkRows Function
+   #your codes goes here
+   
+#def checkCols Function
+   #your codes goes here
+   
+#def checkDiags Function
+   #your codes goes here
+  
+   
+#def checkWin Function
+   #your codes goes here
+   
+#def turnCount Function
+   #your codes goes here

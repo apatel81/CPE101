@@ -1,0 +1,53 @@
+#Project 2 - Moonlander Functions
+#Name: Ajay Patel
+#Professor: S. Einakian
+#Section: 1
+
+def showWelcome():
+   #Display welcome message
+   #str -> str
+   message1 = 'Welcome aboard the Lunar Module Flight Simulator'
+   message2 = "   To begin you must specify the LM's initial 
+            "\n"+ altitude and fuel level. To simulate the actual LM use 
+            "\n"+ values of 1300 meters and 500 liters, respectively."
+   message3 = '   Good luck and may the force be with you!'
+   print(message1)
+   print(message2)
+   print(message3)
+   
+def getFuel():
+   #Ask user for a positive integer and return it
+   #None -> int
+   num = input('Enter the initial amount of fuel on board the LM (in liters):')
+   return int(num)
+
+  
+def getAltitude():
+   #Ask user for an initial altitude
+   #int -> int
+   num  = int(input('Enter the initial altitude of the LM (in meters):'))
+   if 1<=num<=9999:
+      return num
+   else:
+      return ('ERROR')
+   
+def displayLMState(elapsedTime, altitude, velocity, fuelAmount, fuelRate):
+   pass
+
+def getFuelRate(currentFuel):
+   pass
+ 
+def updateAcceleration(gravity, fuelRate):
+   pass
+	
+def updateAltitude(altitude, velocity, acceleration):
+   pass
+
+def updateVelocity(velocity, acceleration):
+   pass
+
+def updateFuel(fuel, fuelRate):
+   pass
+
+def displayLMLandingStatus(velocity):
+   pass

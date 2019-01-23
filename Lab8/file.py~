@@ -1,0 +1,23 @@
+#Lab8
+#Name: Ajay Patel
+#Section: 1
+
+import sys
+
+args = sys.argv
+
+filename = args[1]
+
+try: 
+   fin = open(filename, 'r')
+   list = []
+   for line in fin: 
+       #s = line.split()        
+       #for elements in s:
+            #list.append(elements)
+       list.append(line)  
+ 
+   print(list)
+
+except:
+   print("Error")

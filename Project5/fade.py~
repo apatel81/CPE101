@@ -1,0 +1,79 @@
+#Project 5 - Image
+#Names: Haley Childress and Ajay Patel
+#Instrcutor: S. Einakian
+#Section: 1
+
+import math
+import sys
+args = sys.argv
+
+if len(args) == 5:
+   if type(int(args[2])) == int:
+      rowy = args[2]
+      if type(int(args[3])) == int:
+         colx = args[3]
+         if type(int(args[4])) == int:
+            radius = args[4]
+
+            filename = args[1]
+            try:
+               fin = open(filename, 'r')
+               t = [] 
+               for line in fin:
+                   s = line.split()
+                   for elements in s:
+                       t.append(elements)
+
+          
+               totalrowy = t[2] 
+               totalcolx = t[1]
+               i = 4 
+               group3list = []
+               while i < len(t):
+                  three = t[i:i+3] 
+                  i += 3
+                  group3list.append(three)
+
+               print(group3list)
+               print("")
+
+               givenpoint = (int(rowy) * int(totalcolx)) + int(colx)
+               print(givenpoint)
+               print(group3list[givenpoint])
+           
+               for pixel in group3list:
+                   for color in pixel:
+                       color = (radius - 1)
+               
+ 
+  
+
+
+
+               #for row in range(int(totalrowy)):
+                   #start = row * int(totalcolx) 
+                   #end = start + int(totalcolx)
+                   #rows = (group3list[start:end])
+                   #print(rows)   
+                  
+                   #for i in range(int(totalcolx)):
+                       #print(i)                   
+                   #for col in range(rows):
+                       #cols = group3list[col:len(group3list):totalcolx]
+                       #print(cols) 
+ 
+                               
+
+            except:
+               print('Unable to open ' + filename)
+
+
+
+         else:
+           print('Usage: python fade.py <image> <row> <column> <radius>')
+      else:
+        print('Usage: python fade.py <image> <row> <column> <radius>')
+   else:
+      print('Usage: python fade.py <image> <row> <column> <radius>')
+else:
+   print('Usage: python fade.py <image> <row> <column> <radius>')

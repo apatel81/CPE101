@@ -1,0 +1,75 @@
+#Lab 7
+#Name: Ajay Patel
+#Section 1
+
+import sys
+args = sys.argv
+
+if len(args) == 2:
+   filename = args[1]
+   try:
+      fin = open(filename, 'r')
+      t = []
+      for line in fin:
+          s = line.split()
+          for elements in s:
+              t.append(elements)
+      ints = 0
+      floats = 0
+      other = 0
+      for i in range(len(t)):       
+          if t[i].isdigit() == True:
+             print(t[i])
+             ints += 1
+          else:
+            try:
+              float(t[i])
+              print(t[i])
+              floats += 1 
+            except:
+              print(t[i])
+              other += 1
+      
+      print(ints, floats, other) 
+      print('Ints: ' , ints)
+      #print('Floats: ' + floats)
+      #print('Other: ' + other)
+
+   except:  
+      print('Unable to open ' + filename)
+
+
+elif len(args) == 3:
+   if args[2] == '-s':
+      filename = args[1]
+      try:
+         fin = open(filename, 'r')
+         for line in fin:
+             print(line)
+      except:
+         print('Unable to open ' + filename)
+   
+   elif args[1] == '-s':
+      filename = args[2]
+      try:
+         fin = open(filename, 'r')
+         for line in fin:
+             print(line)
+      except: 
+         print('Unable to open ' + filename)     
+
+   else:
+       print('Usage: [-s] file_name') 
+       exit()
+else:
+    print('Usage: [-s] file_name')
+    exit() 
+
+
+
+
+def commandline(filename, flag):
+    pass
+    
+    
+
